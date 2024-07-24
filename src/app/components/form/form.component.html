@@ -1,0 +1,8 @@
+<div class="getCity">
+    <form [formGroup]="formGroup">
+        <p-autoComplete formControlName="selectedCountry" [suggestions]="filteredCountries"
+            (completeMethod)="filterCountry($event)" field="name" />
+    </form>
+    <p-button label="Показать" (onClick)="setWeather()" />
+    <p-button icon="pi pi-save" (onClick)="saveWeather()" />
+</div>

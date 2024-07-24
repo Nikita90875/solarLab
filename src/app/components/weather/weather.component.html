@@ -1,0 +1,18 @@
+<ng-container *ngIf="weatherData">
+    <h2>{{weatherData.city}}</h2>
+    <div class="weather-info-blocks">
+      <div class="weather-info-block">
+        <p>Температура: {{weatherData.data.main.temp}} °C</p>
+      </div>
+      <div class="weather-info-block">
+        <p>Погодные условия: {{weatherData.data.weather[0].description}}</p>
+      </div>
+      <div class="weather-info-block">
+        <p>Атмосферное давление на уровне моря: {{weatherData.data.main.pressure}} гПа</p>
+      </div>
+      <div class="weather-info-block">
+        <p>Влажность: {{weatherData.data.main.humidity}} %</p>
+      </div>
+    </div>
+  </ng-container>
+  

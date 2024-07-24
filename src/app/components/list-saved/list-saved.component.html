@@ -1,0 +1,20 @@
+<div class="content-list">
+    <div class="header">
+        <p>Сохраненные</p>
+    </div>
+    <div class="items">
+        <ng-container *ngFor="let item of storageService.listCities; let i = index">
+            <div class="card" (click)="getItemCity(item.city.city)">
+                <div class="text">
+                    <p class="number">{{ i + 1 }}</p>
+                    <p>{{ item.city.city }}</p>
+                </div>
+               <div class="btn">
+                <p-button icon="pi pi-times" [rounded]="true" [text]="true" severity="danger" (click)="deleteItem(item.key)" />
+               </div>
+                
+            </div>
+        </ng-container>
+
+    </div>
+</div>
